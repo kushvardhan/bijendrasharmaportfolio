@@ -1,38 +1,49 @@
 "use client";
 
 import * as React from "react";
-import { Lightbulb, Target, Users, Zap, type LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 import { Stagger } from "@/components/motion/Stagger";
+import { Target, Users, Lightbulb, TrendingUp, Shield, Heart } from "lucide-react";
 
-type Item = { icon: LucideIcon; title: string; desc: string };
-
-const ITEMS: Item[] = [
-  { icon: Lightbulb, title: "You have an idea", desc: "But no clear path to execute it" },
-  { icon: Target, title: "You want to scale", desc: "But current systems are holding you back" },
-  { icon: Users, title: "You need a trusted partner", desc: "Someone who understands your vision" },
-  { icon: Zap, title: "You want real results", desc: "Not empty promises or generic solutions" },
+const CARDS = [
+  { icon: Target, title: "Need a reliable tech partner?", desc: "You want someone who delivers on time, every time. Not just promises." },
+  { icon: Users, title: "Struggling with vendor trust?", desc: "We act as advisors, not vendors. Your success is our reputation." },
+  { icon: Lightbulb, title: "Want custom software solutions?", desc: "From MLM software to e-commerce, we build what your business actually needs." },
+  { icon: TrendingUp, title: "Looking to scale your business?", desc: "Our systems have helped 5,000+ clients grow across different domains." },
+  { icon: Shield, title: "Need government-grade quality?", desc: "ISO Certified, Government Registered. We handle serious projects." },
+  { icon: Heart, title: "Value long-term relationships?", desc: "We have been building trust since 2004. Our clients stay because we care." },
 ];
 
 export function RelatableSection() {
   return (
-    <section className="bg-white py-20 md:py-32 px-6 md:px-12 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[var(--surface-2)] px-6 md:px-12 lg:px-16 py-20 md:py-28">
+      <div className="max-w-[1400px] mx-auto">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2c241c] mb-12 text-center">
-            Can you relate?
-          </h2>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--accent)] mb-4">
+              Can you relate?
+            </p>
+            <h2 className="text-[clamp(2rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-tight text-[var(--foreground)]">
+              These are the challenges we solve every day
+            </h2>
+          </div>
         </Reveal>
 
-        <Stagger className="grid md:grid-cols-2 gap-6">
-          {ITEMS.map((item) => (
-            <Reveal
-              key={item.title}
-              className="p-8 rounded-2xl border-2 border-[#e8e2dc] hover:border-[#8b9e6f] hover:shadow-lg hover:bg-[rgba(139,158,111,0.05)] transition-all group"
-            >
-              <item.icon className="h-10 w-10 text-[#8b9e6f] mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold text-[#2c241c] mb-2">{item.title}</h3>
-              <p className="text-[#6b5d52]">{item.desc}</p>
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" stagger={0.06}>
+          {CARDS.map((c) => (
+            <Reveal key={c.title}>
+              <motion.div
+                whileHover={{ y: -8, boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="group rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-7 cursor-default h-full"
+              >
+                <div className="h-12 w-12 rounded-2xl bg-[var(--accent-weak)] flex items-center justify-center mb-5 group-hover:bg-[var(--accent)] group-hover:text-white transition-colors duration-300">
+                  <c.icon className="h-5 w-5 text-[var(--accent)] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">{c.title}</h3>
+                <p className="text-sm text-[var(--muted)] leading-relaxed">{c.desc}</p>
+              </motion.div>
             </Reveal>
           ))}
         </Stagger>
@@ -40,3 +51,4 @@ export function RelatableSection() {
     </section>
   );
 }
+
