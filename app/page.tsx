@@ -1,9 +1,7 @@
-import { HeroSection } from "@/components/sections/home/HeroSection";
-import { TrustSection } from "@/components/sections/home/TrustSection";
+import { CinematicHero } from "@/components/sections/home/CinematicHero";
 import { StorySection } from "@/components/sections/home/StorySection";
-import { RelatableSection } from "@/components/sections/home/RelatableSection";
-import { ServicesSection } from "@/components/sections/home/ServicesSection";
-import { PhilosophySection } from "@/components/sections/home/PhilosophySection";
+import { CompanySection } from "@/components/sections/home/CompanySection";
+import { PoliticsSection } from "@/components/sections/home/PoliticsSection";
 import { CTASection } from "@/components/sections/home/CTASection";
 import { SiteFooter } from "@/components/sections/home/SiteFooter";
 
@@ -12,12 +10,10 @@ import { SiteFooter } from "@/components/sections/home/SiteFooter";
 export default function Home() {
   return (
     <main className="relative">
-      <HeroSection />
-      <TrustSection />
+      <CinematicHero />
       <StorySection />
-      <RelatableSection />
-      <ServicesSection />
-      <PhilosophySection />
+      <CompanySection />
+      <PoliticsSection />
       <CTASection />
       <SiteFooter />
     </main>
