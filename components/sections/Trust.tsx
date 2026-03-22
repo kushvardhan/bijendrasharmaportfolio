@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '@/lib/animations/framer-presets';
@@ -12,7 +14,7 @@ const StatItem: React.FC<{ number: string; label: string; delay: number }> = ({ 
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, delay: delay + 0.2 }}
-      className="text-4xl sm:text-5xl font-bold bg-gradient-to-br from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-300 bg-clip-text text-transparent mb-2"
+      className="text-4xl sm:text-5xl font-bold bg-linear-to-br from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-300 bg-clip-text text-transparent mb-2"
     >
       {number}
     </motion.div>

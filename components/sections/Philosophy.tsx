@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -74,7 +76,7 @@ export const Philosophy: React.FC = () => {
                   viewport={{ once: true }}
                   className="flex gap-4"
                 >
-                  <span className="text-4xl flex-shrink-0">{belief.icon}</span>
+                  <span className="text-4xl shrink-0">{belief.icon}</span>
                   <div>
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
                       {belief.title}
@@ -95,8 +97,8 @@ export const Philosophy: React.FC = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-96 sm:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-400 via-neutral-500 to-neutral-600 dark:from-neutral-600 dark:via-neutral-700 dark:to-neutral-800">
+            <div className="relative h-96 sm:h-125 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-linear-to-br from-neutral-400 via-neutral-500 to-neutral-600 dark:from-neutral-600 dark:via-neutral-700 dark:to-neutral-800">
                 <div className="absolute inset-0 flex items-center justify-center text-neutral-700 dark:text-neutral-400 font-medium">
                   [Portrait Placeholder]
                 </div>

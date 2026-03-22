@@ -1,3 +1,4 @@
+"use client";
 import { ThemeProvider } from '@/context/ThemeContext';
 import { Navigation } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -24,9 +25,9 @@ function App() {
         <Services />
         <Blog />
         <Philosophy />
-        <CTA />
-        <Footer />
-      </div>
+      <CTA />
+      <Footer />
+    </div>
     </ThemeProvider>
   );
 }

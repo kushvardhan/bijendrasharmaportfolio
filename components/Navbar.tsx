@@ -45,11 +45,11 @@ export const Navigation: React.FC = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex-shrink-0"
+            className="shrink-0"
           >
             <a
               href="#"
-              className="text-2xl font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-200 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-linear-to-r from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-200 bg-clip-text text-transparent"
             >
               Bijendra
             </a>
@@ -66,7 +66,7 @@ export const Navigation: React.FC = () => {
                 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold-500 to-sage-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-gold-500 to-sage-500 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>

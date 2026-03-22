@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp } from '@/lib/animations/framer-presets';
@@ -26,7 +28,7 @@ export const CTA: React.FC = () => {
           >
             <a
               href="mailto:contact@bijendrasharma.dev"
-              className="inline-block text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gold-500 to-gold-600 dark:from-gold-400 dark:to-gold-500 bg-clip-text text-transparent hover:from-gold-600 hover:to-gold-700 dark:hover:from-gold-300 dark:hover:to-gold-400 transition-all duration-300"
+              className="inline-block text-4xl sm:text-5xl font-bold bg-linear-to-r from-gold-500 to-gold-600 dark:from-gold-400 dark:to-gold-500 bg-clip-text text-transparent hover:from-gold-600 hover:to-gold-700 dark:hover:from-gold-300 dark:hover:to-gold-400 transition-all duration-300"
             >
               contact@bijendrasharma.dev
             </a>

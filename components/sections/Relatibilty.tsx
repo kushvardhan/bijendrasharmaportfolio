@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations/framer-presets';
@@ -45,7 +47,7 @@ export const Relatability: React.FC = () => {
                 transition={{ delay: index * 0.15 }}
                 className="flex gap-6"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold text-lg">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-linear-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold text-lg">
                   {index + 1}
                 </div>
                 <div>

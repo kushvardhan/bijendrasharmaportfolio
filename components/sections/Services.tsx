@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations/framer-presets';
@@ -81,7 +83,7 @@ export const Services: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 to-sage-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+              <div className="absolute inset-0 bg-linear-to-br from-gold-500/10 to-sage-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
 
               <div className="relative p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-sm border border-gold-500/20 group-hover:border-gold-500/40 transition-all duration-300 h-full flex flex-col">
                 <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-gold-400 transition-colors duration-300">
@@ -122,7 +124,7 @@ export const Services: React.FC = () => {
                   whileInView={{ scaleX: 1 }}
                   transition={{ delay: index * 0.1 + 0.3 }}
                   viewport={{ once: true }}
-                  className="mt-6 h-1 bg-gradient-to-r from-gold-500 to-sage-500 origin-left"
+                  className="mt-6 h-1 bg-linear-to-r from-gold-500 to-sage-500 origin-left"
                 />
               </div>
             </motion.div>

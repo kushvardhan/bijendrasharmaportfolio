@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -31,7 +33,7 @@ export const Footer: React.FC = () => {
         >
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-200 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-bold bg-linear-to-r from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-200 bg-clip-text text-transparent mb-4">
               Bijendra
             </h3>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
@@ -109,7 +111,7 @@ export const Footer: React.FC = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-neutral-800 to-transparent mb-8 origin-center"
+          className="h-px bg-linear-to-r from-transparent via-neutral-200 dark:via-neutral-800 to-transparent mb-8 origin-center"
         />
 
         {/* Bottom */}

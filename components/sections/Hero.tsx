@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations/framer-presets';
@@ -64,7 +66,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative h-96 lg:h-[600px] flex items-center justify-center"
+            className="relative h-96 lg:h-150 flex items-center justify-center"
           >
             {/* Background glow */}
             <div className="absolute inset-0 bg-gradient-radial from-gold-500/20 via-transparent to-transparent dark:from-gold-500/10 rounded-full blur-3xl" />
@@ -81,7 +83,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-2xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-300 via-neutral-400 to-neutral-500 dark:from-neutral-700 dark:via-neutral-600 dark:to-neutral-800">
+              <div className="absolute inset-0 bg-linear-to-br from-neutral-300 via-neutral-400 to-neutral-500 dark:from-neutral-700 dark:via-neutral-600 dark:to-neutral-800">
                 {/* Placeholder for actual photo */}
                 <div className="absolute inset-0 flex items-center justify-center text-neutral-600 dark:text-neutral-400 font-medium">
                   [Professional Portrait]
@@ -110,8 +112,8 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Gradient background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-gold-100 to-transparent dark:from-gold-900/20 opacity-30 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-sage-100 to-transparent dark:from-sage-900/20 opacity-30 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-linear-to-br from-gold-100 to-transparent dark:from-gold-900/20 opacity-30 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-linear-to-tr from-sage-100 to-transparent dark:from-sage-900/20 opacity-30 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

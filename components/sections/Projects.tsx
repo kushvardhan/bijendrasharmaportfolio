@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, hoverLift } from '@/lib/animations/framer-presets';
@@ -92,12 +94,12 @@ export const Projects: React.FC = () => {
             >
               <div className="relative h-full rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 p-8">
                 {/* Background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-linear-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r ${project.color} bg-opacity-10 mb-4`}>
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${project.color}`} />
+                  <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-linear-to-r ${project.color} bg-opacity-10 mb-4`}>
+                    <div className={`w-2 h-2 rounded-full bg-linear-to-r ${project.color}`} />
                     <span className="text-xs font-medium text-neutral-700 dark:text-neutral-300">
                       {project.category}
                     </span>
@@ -121,7 +123,7 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Hover highlight */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-br from-white/10 to-transparent rounded-full -mr-16 -mt-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}

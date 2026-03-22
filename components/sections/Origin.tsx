@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations/framer-presets';
@@ -73,12 +75,12 @@ export const Origin: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.2 }}
-                    className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold flex-shrink-0 group-hover:shadow-lg group-hover:shadow-gold-500/50 transition-shadow duration-300"
+                    className="w-12 h-12 rounded-full bg-linear-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white font-bold shrink-0 group-hover:shadow-lg group-hover:shadow-gold-500/50 transition-shadow duration-300"
                   >
                     {index + 1}
                   </motion.div>
                   {index < timelineItems.length - 1 && (
-                    <div className="w-1 h-20 bg-gradient-to-b from-gold-400 to-transparent mt-2" />
+                    <div className="w-1 h-20 bg-linear-to-b from-gold-400 to-transparent mt-2" />
                   )}
                 </div>
 
@@ -88,7 +90,7 @@ export const Origin: React.FC = () => {
                       {item.title}
                     </h3>
                     {item.year && (
-                      <span className="text-gold-400 font-semibold text-sm flex-shrink-0">
+                      <span className="text-gold-400 font-semibold text-sm shrink-0">
                         {item.year}
                       </span>
                     )}
@@ -106,7 +108,7 @@ export const Origin: React.FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
             viewport={{ once: true }}
-            className="mt-20 p-8 rounded-2xl bg-gradient-to-br from-gold-500/10 to-sage-500/10 border border-gold-500/20 dark:border-gold-500/30"
+            className="mt-20 p-8 rounded-2xl bg-linear-to-br from-gold-500/10 to-sage-500/10 border border-gold-500/20 dark:border-gold-500/30"
           >
             <p className="text-white text-lg leading-relaxed">
               "My story is not about how privileged I was, but how I refused to let circumstances define me. Every challenge became a lesson, every setback a setup for a comeback. Today, I lead a company built on values of excellence, integrity, and giving back to society."

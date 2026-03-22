@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations/framer-presets';
@@ -125,7 +127,7 @@ export const Blog: React.FC = () => {
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: index * 0.1 + 0.2 }}
                 viewport={{ once: true }}
-                className="mt-4 h-1 bg-gradient-to-r from-gold-500 to-sage-500 origin-left"
+                className="mt-4 h-1 bg-linear-to-r from-gold-500 to-sage-500 origin-left"
               />
             </motion.article>
           ))}

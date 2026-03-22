@@ -1,27 +1,43 @@
 @import "tailwindcss";
 
+:root {
+  --color-gold-500: #f5a854;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white transition-colors duration-300;
+    background-color: white;
+    color: rgb(23 23 23);
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .dark body {
+    background-color: rgb(10 10 10);
+    color: white;
   }
 
   * {
-    @apply transition-colors duration-300;
+    transition: color 0.3s, background-color 0.3s;
   }
 }
 
 @layer utilities {
   .grain-overlay {
-    @apply relative;
+    position: relative;
   }
 
   .grain-overlay::before {
     content: '';
-    @apply absolute inset-0 pointer-events-none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" /></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.03"/></svg>');
     background-repeat: repeat;
     background-size: 200px 200px;
@@ -71,24 +87,26 @@
 
 /* Selection colors */
 ::selection {
-  @apply bg-gold-500 text-white;
+  background-color: #f5a854;
+  color: white;
 }
 
 ::-moz-selection {
-  @apply bg-gold-500 text-white;
+  background-color: #f5a854;
+  color: white;
 }
 
 /* Smooth transitions */
 button {
-  @apply transition-all duration-300;
+  transition: all 0.3s;
 }
 
 a {
-  @apply transition-colors duration-300;
+  transition: color 0.3s;
 }
 
 /* Form elements */
 input,
 textarea {
-  @apply transition-all duration-300;
+  transition: all 0.3s;
 }
